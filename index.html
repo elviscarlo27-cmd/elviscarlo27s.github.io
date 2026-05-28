@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhathonBeta - Descarga</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 30px;
+      text-shadow: 0 0 15px rgba(0, 255, 100, 0.5);
+    }
+
+    .btn {
+      padding: 15px 40px;
+      font-size: 1.3rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin: 0 15px;
+    }
+
+    .btn-phathon {
+      background: #00ff88;
+      color: black;
+      font-weight: bold;
+    }
+
+    .btn-descargar {
+      background: #ff4444;
+      color: white;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(255, 68, 68, 0.6);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: #1e1e2f;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 80%;
+      border: 2px solid #ff4444;
+    }
+
+    .modal-content h2 {
+      color: #ff4444;
+      margin-top: 0;
+    }
+
+    .modal-content p {
+      line-height: 1.6;
+      text-align: left;
+      font-size: 1.1rem;
+    }
+
+    .btn-entendido {
+      margin-top: 25px;
+      padding: 12px 35px;
+      background: #00ff88;
+      color: black;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>PhathonBeta</h1>
+    <button class="btn btn-phathon">PhathonBeta</button>
+    <button class="btn btn-descargar" onclick="mostrarAviso()">Descargar</button>
+  </div>
+
+  <!-- Modal de Aviso -->
+  <div id="modalAviso" class="modal">
+    <div class="modal-content">
+      <h2>⚠️ AVISO IMPORTANTE</h2>
+      <p>
+        <strong>No nos hacemos responsables</strong> si el programa falla o causa problemas.<br><br>
+        <strong>Recomendamos fuertemente</strong> probarlo primero en una máquina virtual (VirtualBox, VMware, etc.).<br><br>
+        Estaremos avisando por nuestro Discord cuando hagamos cambios o actualizaciones importantes.<br>
+        Por favor, apaguen su computadora cuando les avisemos para evitar que se les cargue una versión en desarrollo al prenderla.
+      </p>
+      <button class="btn-entendido" onclick="aceptarDescarga()">Entendido</button>
+    </div>
+  </div>
+
+  <script>
+    function mostrarAviso() {
+      document.getElementById('modalAviso').style.display = 'flex';
+    }
+
+    function aceptarDescarga() {
+      // ←←← AQUÍ PEGA TU LINK DE MEDIAFIRE ↓↓↓
+      window.location.href = "https://mega.nz/file/C2BDTIjZ#pZsxbfUNZUcBCZpb4lNg4ok9HwS61JW3-knIbnpP2Wk";
+    }
+  </script>
+
+</body>
+</html>
